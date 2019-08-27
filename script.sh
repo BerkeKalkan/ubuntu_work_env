@@ -29,7 +29,7 @@ fancy_echo "Updating system packages ..."
 
 ## Git
 fancy_echo "Installing Git, version control system ..."
-  sudo aptitude install -y git-core
+  sudo aptitude install -y git
 
 ## Check home bin
 if [ ! -d "$HOME/.bin/" ]; then
@@ -131,15 +131,17 @@ fancy_echo "Installing PostgreSQL Ruby interface ..."
 
 ## Curl
 fancy_echo "Installing Curl ..."
-  sudo apt install git-flow  
+  sudo aptitude install -y git-flow  
 
-## Atom text editor
+## Text editor
+fancy_echo "Installing vim"
+  sudo aptitude install -y vim	
 fancy_echo "Installing Atom ..."
   sudo snap install atom  --classic
 
 # Theme Settings
 fancy_echo "Installing Themes ..."
-  sudo apt install arc-theme
+  sudo aptitude install -y arc-theme
   gsettings set org.gnome.desktop.interface gtk-theme "Arc-Dark"
 
   git clone https://github.com/daniruiz/flat-remix && mkdir -p ~/.icons && cp -r flat-remix/Flat-Remix* ~/.icons/ && rm flat-remix -rf
