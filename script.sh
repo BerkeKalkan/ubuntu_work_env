@@ -55,7 +55,6 @@ fancy_echo "Installing Oh-My-ZSH ..."
   git clone git://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh
   cp ~/.zshrc ~/.zshrc.orig
   cp ~/.oh-my-zsh/templates/zshrc.zsh-template ~/.zshrc
-  echo 'eval "$(rbenv init -)"' >> ~/.zshrc  
 
 if [ ! -n "$ZSH" ]; then
   ZSH=~/.oh-my-zsh
@@ -87,6 +86,7 @@ if [[ ! -d "$HOME/.rbenv" ]]; then
       echo 'export PATH="$HOME/.rbenv/bin:$PATH"' >> ~/.zshrc
 
       echo 'eval "$(rbenv init - --no-rehash)"' >> ~/.zshrc
+      echo 'eval "$(rbenv init -)"' >> ~/.zshrc
     fi
 
     export PATH="$HOME/.rbenv/bin:$PATH"
@@ -131,11 +131,11 @@ fancy_echo "Installing PostgreSQL Ruby interface ..."
 
 ## Curl
 fancy_echo "Installing Curl ..."
-  sudo aptitude install -y git-flow  
+  sudo aptitude install -y git-flow
 
 ## Text editor
 fancy_echo "Installing vim"
-  sudo aptitude install -y vim	
+  sudo aptitude install -y vim
 fancy_echo "Installing Atom ..."
   sudo snap install atom  --classic
 
@@ -147,10 +147,11 @@ fancy_echo "Installing Themes ..."
   git clone https://github.com/daniruiz/flat-remix && mkdir -p ~/.icons && cp -r flat-remix/Flat-Remix* ~/.icons/ && rm flat-remix -rf
   gsettings set org.gnome.desktop.interface icon-theme "Flat-Remix-Blue-Dark"
 
-  
+
 clear
 
 
 fancy_echo "Ready and running ZSH ..."
   zsh
 
+echo "Please restart your Operating System !!!"
