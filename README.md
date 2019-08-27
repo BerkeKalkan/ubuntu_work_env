@@ -19,6 +19,7 @@ $ ./script.sh
 * Git flow
 * Zsh
 * Curl
+* Vim
 * Atom
 
 ### Themes
