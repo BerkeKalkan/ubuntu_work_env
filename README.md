@@ -12,3 +12,7 @@
 * Zsh
 * Curl
 * Atom
+
+### Themes
+* Arc-Dark theme (https://github.com/horst3180/arc-theme)
+* Flat-Remix icons (https://github.com/daniruiz/flat-remix)

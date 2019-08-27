@@ -129,11 +129,23 @@ fancy_echo "Installing Rails ..."
 fancy_echo "Installing PostgreSQL Ruby interface ..."
   gem install pg
 
+## Curl
 fancy_echo "Installing Curl ..."
   sudo apt install git-flow  
 
+## Atom text editor
 fancy_echo "Installing Atom ..."
   sudo snap install atom  --classic
+
+# Theme Settings
+fancy_echo "Installing Themes ..."
+  sudo apt install arc-theme
+  gsettings set org.gnome.desktop.interface gtk-theme "Arc-Dark"
+
+  git clone https://github.com/daniruiz/flat-remix && mkdir -p ~/.icons && cp -r flat-remix/Flat-Remix* ~/.icons/ && rm flat-remix -rf
+  gsettings set org.gnome.desktop.interface icon-theme "Flat-Remix-Blue-Dark"
+
+  
 clear
 
 
